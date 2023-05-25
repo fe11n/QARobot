@@ -8,7 +8,7 @@ RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install
 RUN npm run build
 
-FROM nginx:1.21.5
+FROM nginx:1.25
 
 RUN sed -i 's/PASS_MAX_DAYS.*/PASS_MAX_DAYS   0/' /etc/login.defs
 RUN mkdir -p /opt/QARobot
